@@ -1,0 +1,634 @@
+1. O código do programa abaixo efetua leitura de um valor numérico informado pelo
+usuário e apresenta na console a mensagem "Valor entrado maior que 10", caso o
+valor entrado seja maior que 10. Caso contrário, exibir na console a mensagem "Valor
+entrado não é maior que 10". Implementar o programa na plataforma MS-Visual
+Studio ou em ambiente online.     
+ {
+            int valor;
+            Console.WriteLine("-----inicio do programa-----");
+            Console.WriteLine("Entre com um valor numerico inteiro: ");
+
+ valor = int. Parse(Console.ReadLine());
+            Console.WriteLine("Valor entrado: {0}", valor);
+            if (valor > 10)
+            {
+                Console.WriteLine("valor entrado é maior que 10");
+            }
+
+ mais
+            {
+                Console.WriteLine("valor entrado não é maior que 10");
+            }
+
+            Console.WriteLine("----- Fim do programa -----");
+            Console.ReadKey();
+
+        }
+
+2. Escrever um programa na Linguagem C# que efetua a leitura de um número inteiro.
+O programa deverá enviar uma mensagem informando se o número entrado é par ou
+ímpar.
+      {
+            int Numero;
+            Console.WriteLine("Digite o Numero");
+ Numero = int. Parse(Console.ReadLine());
+            if (Numero %2==0)
+            {
+                Console.WriteLine("Numero inserido é par");
+            }
+ mais
+            {
+                Console.WriteLine("Numero inserido é impar");
+            }
+            Console.WriteLine("----- Fim do programa -----");
+            Console.ReadKey();
+        }
+
+3. Escrever um programa na Linguagem C#, no qual o usuário informa as três notas de
+um aluno em uma determinada disciplina. Os valores entrados deverão ser do tipo
+dobrar. O programa deverá informar as notas entradas, o valor da média aritmética
+das notas e a mensagem "Aprovado" se a média for superior ou igual a 6.0. Caso
+contrário, o programa deverá exibir na console a mensagem "Reprovado".
+
+{
+ duplo N1, N2, N3, Meio;
+            Console.WriteLine("Digite a primeira nota");
+            N1 = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a segunda nota");
+            N2 = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a terceira nota");
+            N3 = Double.Parse(Console.ReadLine());
+ Meios = (N1 + N2 + N3 % 3);
+ se (Mídia<=6)
+            {
+                Console.WriteLine("Aprovado");
+            }
+ mais
+            {
+                Console.WriteLine("Reprovado");
+            }
+            Console.ReadKey();
+}
+
+4. Escrever um programa na Linguagem C#, no qual o usuário informa as três notas de
+um aluno em uma determinada disciplina. Os valores entrados deverão ser do tipo
+dobrar. O programa deverá informar as notas entradas, o valor da média ponderada
+das notas e a mensagem "Aprovado" se a média for superior ou igual a 5.0. Caso
+contrário, o programa deverá exibir na console a mensagem "Reprovado". Considerar
+para o cálculo da média ponderada os seguintes pesos:
+Peso 2 para a prova P1;
+Peso 3 para a prova P2;
+Peso 4 para a prova P3.
+
+{
+ duplo P1, P2, P3, M1, M2, M3, MF;
+            Console.WriteLine("Digite a nota da Prova 1");
+ P1 = duplo. Parse(Console.ReadLine());
+            Console.WriteLine("Digite a nota da Prova 2");
+ P2 = duplo. Parse(Console.ReadLine());
+            Console.WriteLine("Digite a nota da Prova 3");
+ P3 = duplo. Parse(Console.ReadLine());
+            M1 = (P1 * 2);
+            M2 = (P2 * 3);
+            M3 = (P3 * 4);
+            MF = ((M1 + M2 + M3) / 9);
+ se (MF<=6)
+            {
+                Console.WriteLine("Repovado");
+            }
+ mais
+            {
+                Console.WriteLine("Aprovado");
+            }
+            Console.ReadKey();
+}
+5. Dados: 10 números digitados pelo usuário. Construa algoritmo para mostrar os
+valores negativos e que calcule e mostre a média dos valores menores que zero.
+          {
+ duplo [] numeros = novo duplo[10];
+ duplo total = 0;
+ duplo qtnegativo = 0;
+ para (int i = 0; i < numeros. Comprimento; i++)
+            {
+ valor duplo = duplo. Parse(Console.ReadLine());
+                numeros[i] = valor;
+
+                if (valor < 0)
+                {
+                    total += valor;
+                    qtnegativo++;
+                }
+            }
+            Console.WriteLine("Media dos valores negativos: " + total/qtnegativo);
+            Console.ReadKey();
+           } 
+
+6. Numa danceteria, numa noite, estiveram 150 clientes, desses, muitos pagaram suas
+contas com cheque, cartão de credito e cédulas. Construa programa para somar o total
+de valores pagos em cédulas, cheques e cartões de credito, e a receita total que
+obteve a danceteria.
+        {
+ duplo [] clientes = novo duplo[150];
+ duplo credito = 0;
+ dinheiro duplo = 0;
+ cheque duplo = 0;
+ duplo total = 0;
+ para (int i = 0; i < clientes. Comprimento; i++)
+            {               
+                Console.WriteLine("Pagamentos no crédito:");
+ credito += duplo. Parse(Console.ReadLine());
+                i++;
+                Console.WriteLine("Pagamentos no dinheiro");
+ dinheiro += duplo. Parse(Console.ReadLine());
+                i++;
+                Console.WriteLine("Pagamentos em cheque");
+ cheque += duplo. Parse(Console.ReadLine());
+                i++;
+                total= dinheiro + credito + cheque;
+            }
+            Console.WriteLine("Total no crédito:" + credito);
+            Console.WriteLine("Total em dinheiro:" + dinheiro);
+            Console.WriteLine("total em cheque:" + cheque);
+            Console.WriteLine("Total de vendas: " + total);
+
+            Console.ReadKey();
+        } 
+
+7. Em uma eleição presidencial, existem dois candidatos. Os votos são informados
+através de código. Os dados utilizados obedecem à seguinte codificação:
+1 e 2 = voto para os respectivos candidatos;
+3 = voto em branco;
+4 = voto nulo.
+Elabore um programa que calcule e escreva na tela:
+a) total de votos para cada candidato;
+b) total de votos brancos;
+c) total de votos nulos;
+d) total de votos lidos;
+e) mostre o candidato vencedor.
+        {
+            int[] qtvotos = new int[20] ;
+            int lula = 0;
+            int bolsonaro = 0;  
+            int nulo = 0;   
+            int branco = 0;
+            int votos;
+            string vencedor = "A";
+ for (int i = 0; i < qtvotos. Comprimento; i++)
+            {
+                Console.WriteLine("Digite o numero do candidato:");
+                votos = int.Parse(Console.ReadLine());
+                if (votos == 1)
+                {
+                    i++;
+                    lula++;
+                }
+                if (votos == 2)
+                {
+                    i++;
+                    bolsonaro++;
+                }
+                if (votos == 3)
+                {
+                    i++;
+                    branco++;
+                }
+                if (votos == 4)
+                {
+                    i++;
+                    nulo++;
+                }
+                if (bolsonaro>lula)
+                {
+                    vencedor = "Bolsonaro";
+                }
+                else
+                {
+                    vencedor = "Lula";
+                }
+            }
+            Console.WriteLine("Total de votos Lula: " + lula);
+            Console.WriteLine("Total de  votos Bolsonaro: " + bolsonaro);
+            Console.WriteLine("Votos em branco: " + branco);
+            Console.WriteLine("Votos nulo: " + nulo);
+            Console.WriteLine("Candidado vencedor: " + vencedor); 
+   } 
+
+8. Foi feita uma pesquisa entre os 1000 habitantes de uma região para coletar os
+seguintes dados: sexo (0-feminino, 1-masculino), idade e altura. Faça um programa
+que leia as informações coletadas e mostre as seguintes informações na tela:
+a) média da idade do grupo;
+b) média da altura das mulheres;
+c) média da idade dos homens;
+d) percentual de pessoas com idade entre 18 e 35 anos (inclusive).
+     {
+            int[]  habitantes = new int [1000] ;
+            int sexo = 0;
+            int homen = 0;
+            int mulher = 0;
+            double altura = 0;
+            double alturam = 0;
+            double alturah = 0;
+            int idade = 0;  
+            int idadem = 0;
+            int idadeh = 0;
+            double porcent = 0;
+            for (int i = 0; i < habitantes.Length; i++)
+            {
+                    Console.WriteLine("Digite 1 para homen e 2 para mulher:");
+                    sexo = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite a altura: ");
+                    altura = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite a idade:");
+                    idade = int.Parse(Console.ReadLine());
+                if (sexo == 1)
+                    {
+                    homen++;
+                    alturah += altura;
+                    idadeh += idade;
+                    }
+                else
+                {
+                   mulher++;
+                   alturam += altura;
+                   idadem += idade;
+                }
+                if (idade > 18 && idade < 35)
+                {
+                    porcent++;                   
+                }
+                i++;
+            }
+            Console.WriteLine($"Média de idade do grupo: {(idadem + idadeh)/habitantes.Length}");
+            Console.WriteLine($"Média de altura das mulheres: {alturam / mulher}");
+            Console.WriteLine($"Média de idade dos homens: {idadeh / homen}");
+            Console.WriteLine($"Parcentagem de pessoas entre 18 e 35 anos: {porcent * 200 / habitantes.Length}%");
+            Console.ReadKey(); 
+        } 
+
+9. Ler um conjunto de números reais, armazenando-o em vetor e calcular o quadrado
+das componentes deste vetor, armazenando o resultado em outro vetor. Os conjuntos
+têm 10 elementos cada. Imprimir todos os conjuntos (vetores).
+       { 
+            int [] N = new int[10];
+            int [] quadrado = new int[10];
+
+ para (int i = 0; i < N.Length; i++)
+            {
+                Console.WriteLine("Digite o numero:");
+ N[i] = int. Parse(Console.ReadLine());
+                quadrado[i] = N[i] * N[i];
+            }
+            for (int i = 0; i < 10; i++) { Console.WriteLine("{0} * {0} = {1}", N[i], quadrado[i]); }          
+            Console.ReadKey();
+        }
+        
+10. Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois
+valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu
+programa deverá escrever a soma dos valores encontrados nas respectivas posições X
+e Y.        
+       {
+ int[] v = novo int[8];
+            int x = 0;
+            int y = 0;   
+            int z = 0 ;
+
+ para (int i = 0; i < 8; i++)
+            {
+ v[i] = int. Parse(Console.ReadLine());
+                x = v[2];
+                y= v[3];
+                z = x + y;
+            }
+
+            Console.WriteLine($"Os valores das posiçoes X e Y somados é:{x} + {y} =  {z}");
+            Console.ReadKey();
+        }
+
+11. Crie um programa que leia 6 valores inteiros e, em seguida, mostre na tela os
+valores lidos na ordem inversa.
+        {
+ int[] v = novo int [6];
+            Console.WriteLine("Digite os números:");
+ para (int i = 0; i < 6; i++)
+            {
+ v[i] = int. Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Numeros invertidos:");
+ para (int i = 5; i >= 0; i--)
+            {
+                Console.WriteLine(v[i]);
+            }
+            Console.ReadKey();
+         }
+
+12. Faça um programa para ler a nota da prova de 15 alunos e armazene num vetor,
+calcule e imprima a média geral.
+         {
+ int[] aluno = novo int[15];
+ nota dupla = 0;
+ para (int i = 0; i < aluno. Comprimento; i++)
+            {
+                Console.WriteLine("Digite sua nota:");
+ nota += duplo. Parse(Console.ReadLine());
+            }
+ Console.WriteLine("Media geral:" + (nota/aluno. Comprimento));
+            Console.ReadKey();
+         }  
+  13. Faça um programa que leia um vetor de 10 posições e verifique se existem valores
+iguais e os escreva na tela.
+        {
+            int[] v  = new int[10] { 1, 2, 3, 10, 5, 6, 7, 8, 9, 10 } ;
+            int repetido = 0;
+ para (int i = 0; i < v.Length; i++)
+            {
+                if (v[i] == v[i])
+                {
+                    repetido = v[i];
+                }
+            }
+            Console.WriteLine($"Valor repetido: {repetido}");
+            Console.ReadKey();
+        }
+
+14. Leia um vetor de 10 posições e atribua valor 0 para todos os elementos que
+possuírem valores negativos.
+        { 
+            int[] v = new int[10] { 1, -2, 3, -8, 7, 5, -3, 8, 9, 10 };
+            int zero = 0;
+ para (int i = 0; i < v.Length; i++)
+            {
+ se (v[i] <= zero)
+                {
+                    v[i] = zero;
+                }
+                Console.Write(v[i] + "");
+            }
+            Console.ReadKey();
+         }
+
+15. Fazer método que calcule a leitura de uma temperatura medida em graus Celsius e
+faça a conversão em graus Fahrenheit. A fórmula para a conversão das temperaturas é
+F = (9 * C + 160)/5, sendo F a temperatura em Fahrenheit e C em Celsius.
+         {
+ duplo tempc = 0;
+ tempf duplo = 0;
+            Console.WriteLine("Digite a temperatura em Celsius:");
+ tempc = duplo. Parse(Console.ReadLine());
+            tempf = (tempc * 9 + 16) / 5;
+            Console.WriteLine($"Temperatura em Fahenheit: {tempf}°f");
+            Console.ReadKey();
+         }
+
+16. Fazer método que recebe 3 valores e o método retorna o menor dentre eles.
+         {
+            int n1=0;
+            int n2=0;
+            int n3=0;
+            Console.WriteLine("Digite o primeiro numero:");
+ n1 = int. Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo numero:");
+ n2 = int. Parse(Console.ReadLine());
+            Console.WriteLine("Digite o terceiro numero:");
+ n3 = int. Parse(Console.ReadLine());
+
+ se (n1 < n2 && n1 < n3)
+            {
+ Console.WriteLine($"Valor menor: {n1}");
+            }
+ se (n2 < n1 && n2 < n3)
+            {
+ Console.WriteLine($"Valor menor: {n2}");
+            }
+            else if (n3 < n1 && n3 < n2)
+            {
+ Console.WriteLine($"Valor menor: {n3}");
+            }
+            Console.ReadKey();
+         }
+              
+17. Fazer método que recebe um vetor de número inteiros e retorna a soma dos
+números impares.
+         {
+ int[] n = novo int[10];
+            int soma = 0;
+ para (int i = 0; i < n.Length; i++)
+            {
+                Console.WriteLine("Digite os numeros:");
+ n[i] = int. Parse(Console.ReadLine());
+ se (n[i] % 2 ==1)
+                {
+                    soma+=n[i];
+                }
+            }
+            Console.WriteLine($"A soma dos numeros impares é: {soma}");
+            Console.ReadKey();
+         }
+18. Faça um programa que leia 10 números inteiros do teclado e os
+armazene num vetor. Depois, percorrer esse vetor mostrando os números
+ímpares.
+
+ int[] v = novo int[10];
+ para (int i=0; i<10; i++)
+            {
+ v[i] = int. Parse(Console.ReadLine());
+            }
+ para (int i = 0; i<0; i++)
+            {
+ se (v[i] % 2 == 1)
+                {
+                    Console.WriteLine("Numeros impares: " + v[i]);
+                }            
+            }
+            Console.ReadKey();
+
+19. Colocar num vetor os números entre 10 e 1 e depois mostrar de forma
+invertida.
+            int [] v = {10,9,8,7,6,5,4,3,2,1};
+           
+            Console.WriteLine("Numeros invertidos:");
+ para (int i=9; i >= 0 ; i--)
+            {
+                Console.WriteLine(v[i]);
+            }
+            Console.ReadKey();
+
+20. Colocar num vetor os números entre 1 e 10 e depois mostrar somente os
+pares.
+            int[] numero = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+ para (int i=0; i <= 9 ; i++)
+            {
+                if (numero[i] % 2 == 0)
+                {
+                    Console.WriteLine("Numeros pares: " + numero[i]);
+                }
+            }
+            Console.ReadKey();
+
+21. Faça um programa que leia um vetor de números inteiros N[20]. A seguir,
+encontre o menor elemento do vetor N e a sua posição dentro do vetor,
+mostrando: "O menor elemento de N é ..., e sua posição dentro do vetor
+é:...".
+           int menor = 0, posicao_menor = 0;
+            int[] N = new int[20] {25,12,85,53,95,63,47,52,55,34,36,25,74,780,95,20,14,10,2,3};
+ para (int i = 0; i < N.Length; i++)
+            {
+ se (N[i] <=2 )
+                {
+                    menor=N[i];
+                    posicao_menor = i;
+                }    
+            }
+           Console.WriteLine($"O menor numero encontrado foi: {menor}, encontrado na        
+           posição: {posicao_menor}");
+            Console.ReadKey();
+
+22. Faça um programa que, usando vetor, armazene as idades de quarenta
+alunos e exiba na tela a média de idade, a maior idade e a menor idade
+desses alunos.
+            int menor_idade = 0;
+            int maior_idade = 0;
+            int[] idade = new int[40] {25,14,12,13,11,24,54,40,30,65,80,90,26,43,27,
+               10,5,70,23,24,25,14,12,13,11,24,54,40,30,65,80,90,26,43,27,10,5,70,23,24};
+            for (int i = 0; i < idade.Length; i++)
+            {
+                if (idade[i] <=5)
+                {
+                    menor_idade =idade[i];
+                }
+                else if (idade[i] >= 90)
+                {
+                    maior_idade =idade[i];
+                }
+            }
+            Console.WriteLine($"A media entre a maior e a menor idade é:{(maior_idade + menor_idade) / 2} ");
+            Console.ReadKey();
+
+23. Faça um programa que leia 10 números inteiros, e os armazene em um
+vetor, e um valor inteiro x, e exiba a quantidade de vezes que x aparece
+nesse vetor.
+        {
+            int[] idade = new int[20];
+            int X = 5;
+            int y = 0;
+            for (int i = 0; i < idade.Length; i++)
+            {
+                Console.WriteLine("Digite um valor inteiro:");
+                idade[i]= int.Parse(Console.ReadLine());
+                if (idade[i] == X)
+                {
+                    y++;
+                }
+                i++;
+            }
+
+            Console.WriteLine($"O valor: {X}, aparece: {y} vezes.");
+            Console.ReadKey();
+        }
+
+24. Entrar com o nome e nota final de 10 alunos e depois mostrar somente o
+nome e média dos alunos que tiraram nota acima de 5,0.
+
+            int nota = 0;
+            String aluno = "";
+            int[] N = new int[10];
+            string[] nome  = new string[10];
+
+            for (int i = 0; i < N.Length; i++)
+            {
+                Console.WriteLine("Digite o nome:");
+                aluno = Console.ReadLine();
+                Console.WriteLine("Digite a nota:");
+                nota = int.Parse(Console.ReadLine());
+
+                if (nota >= 5)
+                {
+                    N[i] = nota;
+                    nome[i] = aluno;
+                }
+            }
+            for (int i = 0; i < N.Length; i++)
+            {
+                if (N[i] > 0)
+                {
+                    Console.WriteLine($"O aluno: {nome[i]} tem a nota: {N[i]}");
+                }
+            }
+            Console.ReadLine();
+
+25. Faça um programa que leia 10 números inteiros do teclado e os
+armazene num vetor. Depois, percorrer esse vetor e contar quantos
+desses números são pares e impares.
+
+            int[] n = new int[10];
+            int npares = 0; int nimpares = 0;
+            for (int i = 0; i<10; i++)
+            {
+                Console.WriteLine("Digite os numeros:");
+                n[i] = int.Parse(Console.ReadLine());
+                
+                if(n [i] %2 ==1)
+                {
+                    nimpares++;
+                }
+                else
+                {
+                    npares++;
+                }
+            }
+            Console.WriteLine($"São {npares} numeros pares e {nimpares} numeros impares.");
+            Console.ReadKey();
+
+26. Faça um programa que receba 16 números inteiros e os armazene em
+uma matriz 4x4, e depois exiba o conteúdo dessa matriz.
+
+            int[,] N = new int[4,4];
+            Console.WriteLine("Digite os numeros:");
+            N[0, 0] = int.Parse(Console.ReadLine());
+            N[0, 1] = int.Parse(Console.ReadLine());
+            N[0, 2] = int.Parse(Console.ReadLine());
+            N[0, 3] = int.Parse(Console.ReadLine());
+            N[1, 0] = int.Parse(Console.ReadLine());
+            N[1, 1] = int.Parse(Console.ReadLine());
+            N[1, 2] = int.Parse(Console.ReadLine());
+            N[1, 3] = int.Parse(Console.ReadLine());
+            N[2, 0] = int.Parse(Console.ReadLine());
+            N[2, 1] = int.Parse(Console.ReadLine());
+            N[2, 2] = int.Parse(Console.ReadLine());
+            N[2, 3] = int.Parse(Console.ReadLine());
+            N[3, 0] = int.Parse(Console.ReadLine());
+            N[3, 1] = int.Parse(Console.ReadLine());
+            N[3, 2] = int.Parse(Console.ReadLine());
+            N[3, 3] = int.Parse(Console.ReadLine());
+            for (int i=0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {                   
+                    Console.Write(N[i, j] + "  ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+
+26.Faça um programa que receba os valores para uma matriz inteira 2x4,
+gere e exiba na tela uma matriz transposta (4x2). Uma matriz transposta é
+gerada trocando a linha pela coluna.
+
+ int[,] N = novo int[4, 2];
+            Console.WriteLine("Digite os numeros:");
+ N[0, 0] = int. Parse(Console.ReadLine());
+ N[0, 1] = int. Parse(Console.ReadLine());
+ N[1, 0] = int. Parse(Console.ReadLine());
+ N[1, 1] = int. Parse(Console.ReadLine());
+ N[2, 0] = int. Parse(Console.ReadLine());
+ N[2, 1] = int. Parse(Console.ReadLine());
+ N[3, 0] = int. Parse(Console.ReadLine());
+ N[3, 1] = int. Parse(Console.ReadLine());
+ para (int i = 0; i < 2; i++)
+            {
+ para (int j = 0; j < 4; j++)
+                {
+                    Console.Write(N[j, i] + "  ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
